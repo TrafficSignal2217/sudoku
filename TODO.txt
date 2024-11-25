@@ -1,0 +1,19 @@
+in main.py:
+	# TODO #1: Add win game state and screen with play again and exit buttons; You can base this off the main_menu code
+	# TODO #2: Add lose game state and screen with play again and exit buttons; You can base this off the main_menu code
+
+in other files:
+	# TODO #3: Create file with Button class
+		Buttons should be able to detect if the user clicks and if they clicked within the bounds of the button rect.
+	# TODO #4: Add clickable buttons to the main_menu, win, and lose screens using the Button class
+		Clicking on the buttons should change the game state and generate a sudoku board if starting a new game.
+
+in board_render.py:
+	# TODO #5: Add code to board_render.draw() to draw the numbers in the board (For debugging purposes, draw zeros for empty cells)
+
+in sudoku_generator.py:
+	# TODO #6: get_board()
+	# TODO #7: print_board()
+	# TODO #8: valid_in_row(row, num); valid_in_col(col, num); valid_in_box(row_start, col_start, num); is_valid(row, col, num)
+	# TODO #9: fill_box(row_start, col_start); fill_diagonal()
+	# TODO #10: remove_cells()

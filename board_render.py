@@ -51,5 +51,5 @@ class Board_Render:
             pygame.draw.line(surface, self.line_color, (self.left, self.top + y * self.cell_size), (self.left + 9 * self.cell_size, self.top + y * self.cell_size), thickness)
 
 
-        # TODO: Add code in this method to draw the numbers in the board (For debugging purposes, draw zeros for empty cells)
+        # TODO #5: Add code in this method to draw the numbers in the board (For debugging purposes, draw zeros for empty cells)
 

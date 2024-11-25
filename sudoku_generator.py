@@ -39,12 +39,13 @@ class SudokuGenerator:
         self.board = []			            # a 2D list of ints to represent the board
         self.box_length = row_length ** 0.5	# the square root of row_length
 
-        # Fill board with zeros
+        # Fill board with zeros and make it 2D by adding lists within lists
         for i in range(1, row_length + 1):
             self.board[i] = []
             for j in range(1, row_length + 1):
                 self.board[i][j] = 0
 
+    # TODO #6: get_board()
     '''
 	Returns a 2D python list of numbers which represents the board
 
@@ -54,6 +55,7 @@ class SudokuGenerator:
     def get_board(self):
         pass
 
+    # TODO #7: print_board()
     '''
 	Displays the board to the console
     This is not strictly required, but it may be useful for debugging purposes
@@ -64,6 +66,7 @@ class SudokuGenerator:
     def print_board(self):
         pass
 
+    # TODO #8: valid_in_row(row, num); valid_in_col(col, num); valid_in_box(row_start, col_start, num); is_valid(row, col, num)
     '''
 	Determines if num is contained in the specified row (horizontal) of the board
     If num is already in the specified row, return False. Otherwise, return True
@@ -118,6 +121,7 @@ class SudokuGenerator:
     def is_valid(self, row, col, num):
         pass
 
+    # TODO #9: fill_box(row_start, col_start); fill_diagonal()
     '''
     Fills the specified 3x3 box with values
     For each position, generates a random digit which has not yet been used in the box
@@ -203,6 +207,7 @@ class SudokuGenerator:
         self.fill_diagonal()
         self.fill_remaining(0, self.box_length)
 
+    # TODO #10: remove_cells()
     '''
     Removes the appropriate number of cells from the board
     This is done by setting some values to 0

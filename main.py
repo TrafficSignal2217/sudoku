@@ -5,7 +5,6 @@ from sudoku_generator import *
 
 
 
-
 def main():
     ### pygame setup ###
     pygame.init()
@@ -23,7 +22,7 @@ def main():
         "win" : 2,
         "lose" : 3
     }
-    game_state = states["playing"]
+    game_state = states["main_menu"]
 
     ### Load images, fonts, and everything else that will be rendered ###
     fonts = {
@@ -55,7 +54,8 @@ def main():
         elif game_state == states["playing"]:
             screen.fill(background_color)
             rendered_board.draw(screen)
-        # TODO: Add win and lose game states
+        # TODO #1: Add win game state and screen with play again and exit buttons
+        # TODO #2: Add lose game state and screen with play again and exit buttons
 
 
         # This draws what was rendered to the screen
@@ -68,7 +68,8 @@ def main():
 
 
 
-
-
 if __name__ == "__main__":
     main()
+
+
+

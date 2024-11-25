@@ -15,7 +15,7 @@ def main_menu(screen, screen_width, screen_height, backdrop, fonts):
     screen.blit(subheader_surf, subheader_rect)
 
     pygame.draw.rect(screen, "green", [700, 700, 150, 50])
-    pygame.draw.rect(screen, "yellow", [900, 700, 150, 50])
+    pygame.draw.rect(screen, "orange", [900, 700, 150, 50])
     pygame.draw.rect(screen, "red", [1100, 700, 150, 50])
     button1 = "Easy"
     button2 = "Medium"
@@ -29,3 +29,5 @@ def main_menu(screen, screen_width, screen_height, backdrop, fonts):
     screen.blit(button1_surf, button1_rect)
     screen.blit(button2_surf, button2_rect)
     screen.blit(button3_surf, button3_rect)
+    
+    # TODO #4: Add clickable buttons with the Button class

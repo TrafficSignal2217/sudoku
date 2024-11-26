@@ -8,8 +8,8 @@ in other files:
 	# TODO #4: Add clickable buttons to the main_menu, win, and lose screens using the Button class
 		Clicking on the buttons should change the game state and generate a sudoku board if starting a new game.
 
-in board_render.py:
-	# TODO #5: Add code to board_render.draw() to draw the numbers in the board (For debugging purposes, draw zeros for empty cells)
+in board.py:
+	# TODO #5: Add code to board.draw(left_pos, top_pos, cell_size) to draw the numbers in the board (For debugging purposes, draw zeros for empty cells)
 
 in sudoku_generator.py:
 	# TODO #6: get_board()

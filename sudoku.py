@@ -1,6 +1,6 @@
 import pygame
 from main_menu import *
-from board_render import Board_Render
+from board import Board
 from sudoku_generator import *
 
 
@@ -22,7 +22,12 @@ def main():
         "win" : 2,
         "lose" : 3
     }
-    game_state = states["main_menu"]
+    game_state = states["playing"]
+    difficulties = {
+        "easy" : 0,
+        "medium" : 1,
+        "hard" : 2,
+    }
 
     ### Load images, fonts, and everything else that will be rendered ###
     fonts = {
@@ -32,8 +37,8 @@ def main():
     }
     main_menu_backdrop = pygame.image.load('project_image.png')
     background_color = "blanchedalmond"
-    # This is the grid of lines and numbers that is drawn for the sudoku board
-    rendered_board = Board_Render(left_pos=128, top_pos=96, cell_size=128, line_color="black")
+    # For now, create a board to start with. Later we will delete this line because the board will be generated once the player selects the difficulty
+    board = Board(screen, difficulties["easy"])
 
 
     running = True
@@ -53,7 +58,7 @@ def main():
             main_menu(screen, screen_width, screen_height, main_menu_backdrop, fonts)
         elif game_state == states["playing"]:
             screen.fill(background_color)
-            rendered_board.draw(screen)
+            board.draw(left_pos=128, top_pos=96, cell_size=128)
         # TODO #1: Add win game state and screen with play again and exit buttons
         # TODO #2: Add lose game state and screen with play again and exit buttons
 

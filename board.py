@@ -14,7 +14,7 @@ class Board:
     def __init__(self, screen, difficulty):
         self.screen = screen
         self.difficulty = difficulty
-        #self.board = sudoku_generator.generate_board()
+        #self.board = sudoku_generator.generate_sudoku()
 
 
     '''
@@ -50,5 +50,5 @@ class Board:
             pygame.draw.line(self.screen, "black", (left_pos, top_pos + y * cell_size), (left_pos + 9 * cell_size, top_pos + y * cell_size), thickness)
 
 
-        # TODO #5: Add code in this method to draw the numbers in the board (For debugging purposes, draw zeros for empty cells)
+        # TODO #5: Add code in this method to draw the numbers in the board
 

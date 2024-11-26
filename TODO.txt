@@ -7,13 +7,38 @@ in other files:
 		Buttons should be able to detect if the user clicks and if they clicked within the bounds of the button rect.
 	# TODO #4: Add clickable buttons to the main_menu, win, and lose screens using the Button class
 		Clicking on the buttons should change the game state and generate a sudoku board if starting a new game.
+	# TODO #11: Create file with Cell class
+		This class represents a single cell in the Sudoku board. There are 81 Cells in a Board
+		We wont include the draw method for this class. Instead, the Board class will draw the numbers and draw the red outline for which cell is selected
 
 in board.py:
-	# TODO #5: Add code to board.draw(left_pos, top_pos, cell_size) to draw the numbers in the board (For debugging purposes, draw zeros for empty cells)
+	# TODO #5: Add code to board.draw(self, left_pos, top_pos, cell_size) to draw the numbers in the board
+		Also draw the sketched numbers in the top left corner of the each cell.
+	# TODO #12: Add method board.highlight_selected_cell(self, row, col) so that it can draw which cell is selected using a red outline.
+	# TODO #13: board.select(self, row, col) Marks the cell at (row, col) in the board as the current selected cell.
+	# TODO #14: board.click(self, mouse_pos) mouse_pos is a tuple of the mouse x and y coordinates (mouse_x, mouse_y).
+		Returns a tuple of (row, col) that was clicked
+		Use this method to pass in the row and col for board.select()
+	# TODO #15: board.clear(self). clears the value of the selected cell.
+		Note that the user can only remove the cell values and sketched values that are filled by themselves.
+	# TODO #16: board.sketch(self, value) Sets the sketched value of the current selected cell equal to the user entered value.
+		It will be displayed at the top left corner of the cell using the board.draw() function.
+	# TODO #17: board.place_number(self, value) Sets the value of the current selected cell equal to the user entered value. 
+		Called when the user presses the Enter key.
+	# TODO #18: board.reset_to_original(self). Resets all cells in the board to their original values (0 if cleared, otherwise the corresponding digit).
+	# TODO #19: board.is_full(self). Returns a Boolean value indicating whether the board is full or not
+	# TODO #20: board.update_board(self). Updates the underlying 2D board with the values in all cells.
+	# TODO #21: board.find_empty(self). Finds an empty cell and returns its row and col as a tuple (x,y).
+	# TODO #22: board.check_board(self). Check whether the Sudoku board is solved correctly.
+
+
+
+
+
 
 in sudoku_generator.py:
-	# TODO #6: get_board()
-	# TODO #7: print_board()
-	# TODO #8: valid_in_row(row, num); valid_in_col(col, num); valid_in_box(row_start, col_start, num); is_valid(row, col, num)
-	# TODO #9: fill_box(row_start, col_start); fill_diagonal()
-	# TODO #10: remove_cells()
+	# TODO #6: get_board(self)
+	# TODO #7: print_board(self)
+	# TODO #8: valid_in_row(self, row, num); valid_in_col(self, col, num); valid_in_box(self, row_start, col_start, num); is_valid(self, row, col, num)
+	# TODO #9: fill_box(self, row_start, col_start); fill_diagonal(self)
+	# TODO #10: remove_cells(self)
